@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tipos de Datos en JavaScript</title>
+</head>
+<body>
+  <h1>Ejemplos de Tipos de Datos en JavaScript</h1>
+  
+  <script>
+    // Número
+    let num = 123;
+    console.log(typeof num); // "number"
+
+    // BigInt
+    const bigNum = 123456789012345678901234567890n;
+    console.log(typeof bigNum); // "bigint"
+
+    // Cadena de texto
+    let saludo = "Hola";
+    console.log(typeof saludo); // "string"
+
+    // Booleano
+    let esVerdad = true;
+    console.log(typeof esVerdad); // "boolean"
+
+    // null
+    let vacio = null;
+    console.log(typeof vacio); // "object" (bug de JavaScript)
+
+    // undefined
+    let indefinido;
+    console.log(typeof indefinido); // "undefined"
+
+    // Símbolo
+    let simbolo = Symbol("id");
+    console.log(typeof simbolo); // "symbol"
+
+    // Objeto
+    let persona = {
+      nombre: "Juan",
+      edad: 25
+    };
+    console.log(typeof persona); // "object"
+  </script>
+</body>
+</html>
