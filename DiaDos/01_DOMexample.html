@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulación del DOM</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="titulo">Bienvenidos a la clase de DOM</h1>
+  <p id="parrafo">Este es un párrafo de ejemplo.</p>
+  <button id="cambiarTextoBtn">Cambiar texto</button>
+  <button id="resaltarBtn">Resaltar párrafo</button>
+
+  <script>
+    // Acceso al DOM
+    const titulo = document.getElementById('titulo');
+    const parrafo = document.getElementById('parrafo');
+    const cambiarTextoBtn = document.getElementById('cambiarTextoBtn');
+    const resaltarBtn = document.getElementById('resaltarBtn');
+
+    // Cambiar el texto del título al hacer clic en el botón
+    cambiarTextoBtn.addEventListener('click', function() {
+      titulo.textContent = '¡Has cambiado el título!';
+    });
+
+    // Resaltar el párrafo al hacer clic en el botón
+    resaltarBtn.addEventListener('click', function() {
+      parrafo.classList.toggle('highlight');
+    });
+  </script>
+</body>
+</html>
+
