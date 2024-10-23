@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios de Funciones</title>
+</head>
+<body>
+  <h1>Ejercicios de Funciones en JavaScript</h1>
+  
+  <script>
+    // Ejercicio 1: Función que devuelve el menor de dos números
+    function menor(a, b) {
+      if (a < b) {
+        return a;
+      } else {
+        return b;
+      }
+    }
+
+    // Llamadas a la función menor
+    console.log("El menor de 3 y 5 es:", menor(3, 5)); // 3
+    console.log("El menor de 10 y 7 es:", menor(10, 7)); // 7
+
+    // Ejercicio 2: Función sin return
+    function sinReturn() {
+      console.log("Esta función no tiene return");
+    }
+
+    // Llamamos a la función sin return
+    let resultado = sinReturn();
+
+    // Verificamos qué devuelve la función y su tipo de dato
+    console.log("¿Qué devuelve la función sinReturn?", resultado); // undefined
+    console.log("Tipo de dato devuelto:", typeof resultado); // "undefined"
+  </script>
+</body>
+</html>
+
