@@ -11,20 +11,32 @@
     .highlight {
       background-color: yellow;
     }
+    .blue-text {
+      color: blue;
+    }
   </style>
 </head>
 <body>
   <h1 id="titulo">Bienvenidos a la clase de DOM</h1>
   <p id="parrafo">Este es un párrafo de ejemplo.</p>
+  <p class="info">Otro párrafo informativo.</p>
+  <div class="container">
+    <h2 class="section">Sección de ejemplos</h2>
+    <p class="description">Descripción dentro de la sección.</p>
+  </div>
   <button id="cambiarTextoBtn">Cambiar texto</button>
   <button id="resaltarBtn">Resaltar párrafo</button>
+  <button id="cambiarColorBtn">Cambiar color de párrafos</button>
+  <button id="buscarElementoBtn">Buscar elemento</button>
 
   <script>
-    // Acceso al DOM
+    // Acceso al DOM usando getElementById
     const titulo = document.getElementById('titulo');
     const parrafo = document.getElementById('parrafo');
     const cambiarTextoBtn = document.getElementById('cambiarTextoBtn');
     const resaltarBtn = document.getElementById('resaltarBtn');
+    const cambiarColorBtn = document.getElementById('cambiarColorBtn');
+    const buscarElementoBtn = document.getElementById('buscarElementoBtn');
 
     // Cambiar el texto del título al hacer clic en el botón
     cambiarTextoBtn.addEventListener('click', function() {
@@ -35,7 +47,30 @@
     resaltarBtn.addEventListener('click', function() {
       parrafo.classList.toggle('highlight');
     });
+
+    // Cambiar el color de todos los párrafos usando querySelectorAll
+    cambiarColorBtn.addEventListener('click', function() {
+      const parrafos = document.querySelectorAll('p');
+      parrafos.forEach(p => p.classList.toggle('blue-text'));
+    });
+
+    // Buscar un elemento usando querySelector y cambiar su estilo
+    buscarElementoBtn.addEventListener('click', function() {
+      const sectionHeader = document.querySelector('.section');
+      sectionHeader.style.backgroundColor = 'lightgreen';
+    });
+
+    // Usar closest para encontrar el contenedor más cercano y cambiar su borde
+    const descripcion = document.querySelector('.description');
+    const contenedor = descripcion.closest('.container');
+    contenedor.style.border = '2px solid red';
+
+    // Usar matches para verificar si un elemento tiene una clase
+    if (parrafo.matches('.highlight')) {
+      console.log('El párrafo ya tiene la clase "highlight"');
+    } else {
+      console.log('El párrafo no tiene la clase "highlight"');
+    }
   </script>
 </body>
 </html>
-
