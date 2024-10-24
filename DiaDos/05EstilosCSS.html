@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estilos en línea y externos</title>
+  <!-- Link al archivo CSS externo -->
+  <link rel="stylesheet" href="05styles.css">
+</head>
+<body>
+
+  <div id="element" class="styled-element" style="position: absolute; top: 0; left: 0;">
+    Elemento
+  </div>
+
+  <button onclick="moveElement()">Mover Elemento</button>
+  <button onclick="changeStyle()">Cambiar Estilo</button>
+
+  <script>
+    const elem = document.getElementById('element');
+
+    // Función para cambiar la posición del elemento dinámicamente usando estilos en línea
+    function moveElement() {
+      let top = '50px';
+      let left = '100px';
+      elem.style.top = top;
+      elem.style.left = left;
+    }
+
+    // Función para cambiar la clase del elemento
+    function changeStyle() {
+      elem.classList.toggle('new-style');
+    }
+  </script>
+
+</body>
+</html>

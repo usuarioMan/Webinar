@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Modificación del DOM</title>
+    <style>
+        .alert {
+            padding: 10px;
+            background-color: #f44336; /* Color de fondo rojo */
+            color: white; /* Color del texto */
+            margin: 10px 0; /* Espaciado */
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplo de Mensaje Temporal</h1>
+
+    <script>
+        // Crear un nuevo elemento <div>
+        let div = document.createElement('div');
+        div.className = "alert"; // Asignar una clase CSS
+        div.innerHTML = "<strong>Adiós!</strong> Este mensaje desaparecerá."; // Agregar contenido HTML
+
+        // Añadir el div al documento
+        document.body.append(div);
+
+        // Usar setTimeout para eliminar el div después de 3 segundos
+        setTimeout(() => div.remove(), 3000);
+    </script>
+</body>
+</html>

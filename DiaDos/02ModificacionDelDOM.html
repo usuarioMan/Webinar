@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Modificación del DOM</title>
+</head>
+<body>
+
+    <script>
+        let div = document.createElement('div');
+        div.className = "alert";
+        div.innerHTML = "<strong>¡Hola!</strong> Has leído un mensaje importante.";
+        document.body.append(div);
+    </script>
+</body>
+</html>

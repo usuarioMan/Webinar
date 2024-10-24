@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manejadores de Eventos</title>
+</head>
+<body>
+
+  <!-- Atributo HTML: Manejador de eventos directo -->
+  <button onclick="alert('¡Clic!')">Haz clic (HTML)</button>
+
+  <!-- Botones para las otras dos formas -->
+  <button id="myButtonDOM">Haz clic (DOM)</button>
+  <button id="myButtonEventListener">Haz clic (addEventListener)</button>
+
+  <script>
+    // Propiedad DOM: Asignar manejador de eventos desde JavaScript
+    document.getElementById('myButtonDOM').onclick = function() {
+      alert('¡Clic desde DOM!');
+    };
+
+    // addEventListener: La forma más flexible
+    document.getElementById('myButtonEventListener').addEventListener('click', function() {
+      alert('¡Clic desde addEventListener!');
+    });
+  </script>
+
+</body>
+</html>

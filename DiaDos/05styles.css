@@ -1,0 +1,13 @@
+/* Definimos una clase en CSS */
+.styled-element {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+  }
+  
+  /* Nueva clase para cambiar el estilo */
+  .new-style {
+    background-color: lightgreen;
+    border: 2px solid black;
+  }
+  
